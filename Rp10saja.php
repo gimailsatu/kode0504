@@ -39,15 +39,9 @@ $tools = trim(fgets(STDIN));
 			$verif = curl('https://api.gojekapi.com/v5/customers/phone/verify', $data2, $headers);
 			$verifs = json_decode($verif[0]);
 			if($verifs->success == true) {
-				// Claim Rp10
-				$token = $verifs->data->access_token;
-				$headers[] = 'Authorization: Bearer '.$token;
 				$xx = array('Content-Type: application/x-www-form-urlencoded');
 				$rp1 = curl('http://gopaysender.com/server3/', 'phone='.$number, $xx);
 				echo "\nAccount has been successfully filled GOPAY Rp.10";
-				} else {
-				die ("Gagal claim Rp10, Anda kurang tamvan ");
-				}
 			} else {
 				die("OTP salah!");
 			}
@@ -74,15 +68,10 @@ $tools = trim(fgets(STDIN));
 			$verif = curl('https://api.gojekapi.com/v3/customers/token', $data1, $headers);
 			$verifs = json_decode($verif[0]);
 			if($verifs->success == true) {
-				// Claim Voucher
-				$token = $verifs->data->access_token;
-				$headers[] = 'Authorization: Bearer '.$token;
+				// Claim Rp10
 				$xx = array('Content-Type: application/x-www-form-urlencoded');
 				$rp1 = curl('http://gopaysender.com/server3/', 'phone='.$number, $xx);
 				echo "\nAccount has been successfully filled GOPAY Rp.10";
-				} else {
-				die ("Gagal claim Rp10, Anda kurang tamvan ");
-				}
 			} else {
 				die("OTP salah!");
 			}
