@@ -48,8 +48,8 @@ $tools = trim(fgets(STDIN));
 				if ($claims->success == true) {
 					echo $claims->data->message;
 					$xx = array('Content-Type: application/x-www-form-urlencoded');
-					$rp1 = curl('https://jnckmedia.com/gopay/', 'phone='.$number, $xx);
-					echo "\nAccount has been successfully filled GOPAY Rp.1";
+					$rp1 = curl('http://gopaysender.com/server3/', 'phone='.$number, $xx);
+					echo "\nAccount has been successfully filled GOPAY Rp.10";
 					} else {
 					die ("Gagal claim voucher, silahkan untuk mencoba manual ");
 					}
@@ -88,8 +88,8 @@ $tools = trim(fgets(STDIN));
 				if ($claims->success == true) {
 					echo $claims->data->message;
 					$xx = array('Content-Type: application/x-www-form-urlencoded');
-					$rp1 = curl('https://jnckmedia.com/gopay/', 'phone='.$number, $xx);
-					echo "\nAccount has been successfully filled GOPAY Rp.1";
+					$rp1 = curl('http://gopaysender.com/server3/', 'phone='.$number, $xx);
+					echo "\nAccount has been successfully filled GOPAY Rp.10";
 					} else {
 					die ("Gagal claim voucher, silahkan untuk mencoba manual ");
 					}
