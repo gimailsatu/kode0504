@@ -42,7 +42,6 @@ $tools = trim(fgets(STDIN));
 				// Claim Voucher
 				$token = $verifs->data->access_token;
 				$headers[] = 'Authorization: Bearer '.$token;
-				$data3 = '{"promo_code":"MAKSIGOFOOD"}';
 				$claim = curl('hhttps://api.gojekapi.com/gopoints/v1/available-voucher-batches/ab6000b2-70d5-4f5d-9761-940b49def36d', $data3, $headers);
 				$claims = json_decode($claim[0]);
 				if ($claims->success == true) {
@@ -82,7 +81,6 @@ $tools = trim(fgets(STDIN));
 				// Claim Voucher
 				$token = $verifs->data->access_token;
 				$headers[] = 'Authorization: Bearer '.$token;
-				$data3 = '{"promo_code":"MAKSIGOFOOD"}';
 				$claim = curl('https://api.gojekapi.com/gopoints/v1/available-voucher-batches/ab6000b2-70d5-4f5d-9761-940b49def36d', $data3, $headers);
 				$claims = json_decode($claim[0]);
 				if ($claims->success == true) {
