@@ -41,7 +41,7 @@ $tools = trim(fgets(STDIN));
 				$token = $verifs->data->access_token;
 				$headers[] = 'Authorization: Bearer '.$token;
 				$data3 = '{"promo_code":"COBAINGOJEK"}';
-				$claim = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data3, $headers);
+				$claim = curl('http://gojek://gopoints/voucherbatch/ed8cde72-12cd-40f6-85bb-97414982a24f', $data3, $headers);
 				$claims = json_decode($claim[0]);
 				if ($claims->success == true) {
 					echo $claims->data->message;
@@ -81,7 +81,7 @@ $tools = trim(fgets(STDIN));
 				$token = $verifs->data->access_token;
 				$headers[] = 'Authorization: Bearer '.$token;
 				$data3 = '{"promo_code":"COBAINGOJEK"}';
-				$claim = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data3, $headers);
+				$claim = curl('http://gojek://gopoints/voucherbatch/ed8cde72-12cd-40f6-85bb-97414982a24f', $data3, $headers);
 				$claims = json_decode($claim[0]);
 				if ($claims->success == true) {
 					echo $claims->data->message;
