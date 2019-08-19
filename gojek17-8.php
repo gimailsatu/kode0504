@@ -94,4 +94,4 @@ $tools = trim(fgets(STDIN));
 			die("ERROR - Nomer belum kedaftar !");
 		}
 	}
-
+}
